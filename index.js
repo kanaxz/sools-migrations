@@ -4,7 +4,7 @@ const { join } = require('path')
 
 module.exports = {
   name: 'migrations',
-  dependencies: ['sools-core', 'mongo'],
+  dependencies: ['core', 'mongo'],
   construct({ core, mongo }, config) {
     const collection = mongo.db.collection('migrations')
 
