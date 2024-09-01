@@ -4,8 +4,12 @@ const { join } = require('path')
 
 module.exports = {
   name: 'migrations',
-  dependencies: ['core', 'mongo'],
+  dependencies: [
+    require('sools-core-server'),
+    require('sools-mongo'),
+  ],
   construct({ core, mongo }, config) {
+    return
     const collection = mongo.db.collection('migrations')
 
     const migrate = async () => {
